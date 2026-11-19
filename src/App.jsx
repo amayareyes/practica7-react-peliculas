@@ -1,4 +1,5 @@
 import "./App.css";
+import AppRouter from "./routers/AppRouter";
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <header>
         <h1 className="title">🎬 Películas</h1>
       </header>
+      <AppRouter />
     </div>
   );
 }
