@@ -1,0 +1,33 @@
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: #f5f5f5;
+  color: #222;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.footer-escudo {
+  height: 110px;
+  width: auto;
+}
+
+.footer-info p {
+  margin: 0.2rem 0;
+}
+
+.footer-tmdb {
+  margin-top: 0.6rem !important;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
