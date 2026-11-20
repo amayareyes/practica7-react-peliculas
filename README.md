@@ -3,7 +3,6 @@
 ## Integrantes
 
 - Amaya Itzel Reyes Nuñez
-
 - Sofia Abigail Aranda Diaz
 
 **Materia:** Desarrollo de Aplicaciones Web en la Nube y Móviles
@@ -13,9 +12,13 @@
 **Calendario escolar:** 2026B
 
 ## Objetivo
-El objetivo de la practica fue desarrollar una aplicacion web usando Vite, que consumiera la informacion de una API real de peliculas. Mostramos los detalles de cada pelicula incluyendo su poster y visualmente quedo muy bien implementado en nuestra app. Ademas, trabajamos colaborativamente en Github, con mas de 2 commits cada una y finalmente enlazamos nuestro repositorio a Netlify. 
+
+El objetivo de la práctica fue desarrollar una aplicación web usando Vite y React, que consumiera información de una API real de películas. La aplicación permite consultar un listado de películas y mostrar los detalles de cada una, incluyendo su póster, título, géneros y descripción.
+
+Además, trabajamos de manera colaborativa en GitHub, realizando más de dos commits cada una y utilizando ramas para organizar nuestros cambios. Finalmente, conectamos el repositorio con Netlify para publicar la aplicación.
 
 ## Tecnologías utilizadas
+
 - React
 - Vite
 - React Router DOM
@@ -26,18 +29,18 @@ El objetivo de la practica fue desarrollar una aplicacion web usando Vite, que c
 
 ## Estructura del proyecto
 
-```
+```text
 practica7-react-peliculas/
 ├── public/
 │   ├── favicon.svg
-│   └── _redirects          
+│   └── _redirects
 ├── src/
 │   ├── components/
-│   │   ├── Footer.jsx      
+│   │   ├── Footer.jsx
 │   │   ├── Footer.css
-│   │   ├── MovieCard.jsx   
+│   │   ├── MovieCard.jsx
 │   │   ├── MovieCard.css
-│   │   ├── MovieGrid.jsx   
+│   │   ├── MovieGrid.jsx
 │   │   └── MovieGrid.css
 │   ├── img/
 │   │   ├── escudo-cucei.png
@@ -55,7 +58,7 @@ practica7-react-peliculas/
 │   ├── App.jsx
 │   ├── App.css
 │   ├── index.css
-│   └── main.jsx                    
+│   └── main.jsx
 ├── .gitignore
 ├── index.html
 ├── package.json
@@ -63,26 +66,32 @@ practica7-react-peliculas/
 ```
 
 ## Instalación y ejecución local
+
 1. Clonar el repositorio.
-2. Instalar dependencias con `npm install`.
-3. Crear un archivo `.env` en la raíz con esta línea (usamos cada una nuestra propia API key de TMDB):
-   `VITE_TMDB_API_KEY=API_key`
-4. Correr el proyecto con `npm run dev`.
+2. Instalar las dependencias con `npm install`.
+3. Crear un archivo `.env` en la raíz del proyecto y agregar la siguiente línea. Cada integrante debe utilizar su propia API key de TMDB:
+
+   `VITE_TMDB_API_KEY=TU_API_KEY`
+
+4. Ejecutar el proyecto con `npm run dev`.
 
 ## Rutas
-- `/` : listado de películas.
-- `/movies/:movieId` : detalle de una película.
+
+- `/` : muestra el listado de películas.
+- `/movies/:movieId` : muestra los detalles de una película seleccionada.
 
 ## API utilizada
-Usamos la API de TMDB (The Movie Database) para traer la información de las películas. Hacemos dos peticiones:
 
-- `/discover/movie`: trae el listado de la página principal.
-- `/movie/{id}`: trae los datos de la película que se abre en el detalle (póster, título, géneros y descripción).
+Utilizamos la API de TMDB (The Movie Database) para obtener la información de las películas. En el proyecto realizamos dos peticiones principales:
 
-Las peticiones salen de `src/services/httpClient.js`. La API key la guardamos en un archivo `.env` para no subirla a GitHub.
+- `/discover/movie`: obtiene el listado de películas que aparece en la página principal.
+- `/movie/{id}`: obtiene los datos de la película seleccionada, como el póster, título, géneros y descripción.
+
+Las peticiones se realizan desde `src/services/httpClient.js`. La API key se guarda en un archivo `.env` para evitar subirla directamente al repositorio de GitHub.
 
 ## Funcionamiento
-La página principal muestra el listado de películas populares con su póster y título. Al dar clic en una tarjeta se abre el detalle de esa película, con póster, géneros y descripción. Abajo aparece el footer con los datos del equipo.
+
+La página principal muestra un listado de películas con su póster y título. Al seleccionar una tarjeta, se abre una página con los detalles de esa película, donde se pueden consultar su imagen, géneros y descripción. Al final de la aplicación también se encuentra un footer con los datos del equipo.
 
 ![Página principal](docs/principal.png)
 
@@ -93,12 +102,16 @@ La página principal muestra el listado de películas populares con su póster y
 ![Footer](docs/footer.png)
 
 ## Enlaces
-- Repositorio: https://github.com/amayareyes/practica7-react-peliculas
-- Netlify: https://practica7-react-peliculas-770z.netlify.app/
+
+- **Repositorio:** https://github.com/amayareyes/practica7-react-peliculas
+- **Netlify:** https://practica7-react-peliculas-770z.netlify.app/
 
 ## Conclusiones
-Con esta práctica logramos armar una app de películas con React y Vite que consume la API de TMDB, muestra un listado y abre el detalle de cada película con React Router. La publicamos en Netlify y la trabajamos en equipo con GitHub, cada una desde su cuenta y en su propia rama.
 
-Lo que más nos costó no fue el código, sino la parte de organización con Git. Tuvimos que resolver conflictos al unir las ramas, porque las dos habíamos creado archivos con el mismo nombre (App.jsx y MovieDetails.jsx), y nos tocó decidir con cuál versión quedarnos. También nos pasó que un commit que creíamos hecho no se había guardado, y aprendimos a revisar con git status y git log antes de subir cambios.
+Con esta práctica logramos desarrollar una aplicación de películas con React y Vite que consume la API de TMDB. Aprendimos a mostrar un listado de películas y abrir sus detalles utilizando React Router. También trabajamos en equipo con GitHub y publicamos el proyecto en Netlify.
 
-Otra cosa que aprendimos fue a manejar la API key con variables de entorno. La guardamos en un archivo .env que no se sube al repositorio, y en Netlify la configuramos aparte. Además, en el despliegue vimos que Netlify crea los proyectos como privados por defecto, así que tuvimos que cambiar la visibilidad a pública para poder compartir el link.
+Una de las partes que más se nos complicó fue la organización con Git. Tuvimos que resolver conflictos al unir las ramas porque las dos habíamos creado archivos con el mismo nombre, como `App.jsx` y `MovieDetails.jsx`. Por eso, nos tocó revisar los cambios y decidir con qué versión continuar. También nos pasó que un commit que creíamos haber realizado no se había guardado, así que aprendimos a revisar los cambios con `git status` y `git log` antes de subirlos.
+
+Otra cosa que aprendimos fue a manejar la API key mediante variables de entorno. La guardamos en un archivo `.env` que no se sube al repositorio y configuramos la clave por separado en Netlify. Durante la publicación también tuvimos que cambiar la visibilidad del proyecto para poder compartir el enlace.
+
+En general, esta práctica nos ayudó a conocer mejor el uso de React, el consumo de una API externa y el trabajo colaborativo mediante GitHub.
