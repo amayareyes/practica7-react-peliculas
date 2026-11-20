@@ -1,11 +1,15 @@
 # Práctica 7 - App de Películas con React
 
 ## Integrantes
+
 - Amaya Itzel Reyes Nuñez
+
 - Sofia Abigail Aranda Diaz
 
 **Materia:** Desarrollo de Aplicaciones Web en la Nube y Móviles
+
 **Profesor:** Zeus Emanuel Gutiérrez Cobián
+
 **Calendario escolar:** 2026B
 
 ## Objetivo
@@ -51,8 +55,7 @@ practica7-react-peliculas/
 │   ├── App.jsx
 │   ├── App.css
 │   ├── index.css
-│   └── main.jsx
-├── .env                    
+│   └── main.jsx                    
 ├── .gitignore
 ├── index.html
 ├── package.json
@@ -79,11 +82,23 @@ Usamos la API de TMDB (The Movie Database) para traer la información de las pel
 Las peticiones salen de `src/services/httpClient.js`. La API key la guardamos en un archivo `.env` para no subirla a GitHub.
 
 ## Funcionamiento
-[PENDIENTE: pegar aquí las capturas de la página principal y del detalle de dos películas, con una o dos líneas que expliquen qué se ve.]
+La página principal muestra el listado de películas populares con su póster y título. Al dar clic en una tarjeta se abre el detalle de esa película, con póster, géneros y descripción. Abajo aparece el footer con los datos del equipo.
+
+![Página principal](docs/principal.png)
+
+![Detalle de una película](docs/detalle1.png)
+
+![Detalle de otra película](docs/detalle2.png)
+
+![Footer](docs/footer.png)
 
 ## Enlaces
 - Repositorio: https://github.com/amayareyes/practica7-react-peliculas
-- Netlify: [PENDIENTE]
+- Netlify: https://practica7-react-peliculas-770z.netlify.app/
 
 ## Conclusiones
-[PENDIENTE: lo escriben ustedes dos al final.]
+Con esta práctica logramos armar una app de películas con React y Vite que consume la API de TMDB, muestra un listado y abre el detalle de cada película con React Router. La publicamos en Netlify y la trabajamos en equipo con GitHub, cada una desde su cuenta y en su propia rama.
+
+Lo que más nos costó no fue el código, sino la parte de organización con Git. Tuvimos que resolver conflictos al unir las ramas, porque las dos habíamos creado archivos con el mismo nombre (App.jsx y MovieDetails.jsx), y nos tocó decidir con cuál versión quedarnos. También nos pasó que un commit que creíamos hecho no se había guardado, y aprendimos a revisar con git status y git log antes de subir cambios.
+
+Otra cosa que aprendimos fue a manejar la API key con variables de entorno. La guardamos en un archivo .env que no se sube al repositorio, y en Netlify la configuramos aparte. Además, en el despliegue vimos que Netlify crea los proyectos como privados por defecto, así que tuvimos que cambiar la visibilidad a pública para poder compartir el link.
